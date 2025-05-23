@@ -1,0 +1,51 @@
+/* Custom color palette */
+:root {
+  --primary-bg: #2B2D42;
+  --secondary-bg: #8D99AE;
+  --light-bg: #EDF2F4;
+  --accent: #EF233C;
+  --accent-dark: #D90429;
+  --text-light: #ffffff;
+}
+
+/* Body background and text */
+body {
+  background-color: var(--light-bg);
+  color: var(--primary-bg);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-bg);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: var(--text-light) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  border-color: var(--accent);
+}
+
+/* Card styling */
+.card {
+  background-color: var(--light-bg);
+  border: 1px solid var(--secondary-bg);
+}
+
+/* Section headings */
+h2 {
+  color: var(--primary-bg);
+}
