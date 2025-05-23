@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Tash2001/portfolio.git/static/css/main.a7a11cd3.css",
+    "main.js": "/Tash2001/portfolio.git/static/js/main.e70e27ef.js",
+    "static/js/453.bb257cf5.chunk.js": "/Tash2001/portfolio.git/static/js/453.bb257cf5.chunk.js",
+    "index.html": "/Tash2001/portfolio.git/index.html",
+    "main.a7a11cd3.css.map": "/Tash2001/portfolio.git/static/css/main.a7a11cd3.css.map",
+    "main.e70e27ef.js.map": "/Tash2001/portfolio.git/static/js/main.e70e27ef.js.map",
+    "453.bb257cf5.chunk.js.map": "/Tash2001/portfolio.git/static/js/453.bb257cf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7a11cd3.css",
+    "static/js/main.e70e27ef.js"
+  ]
+}
