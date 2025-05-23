@@ -1,4 +1,6 @@
 import React from "react";
+import { HashRouter  as Link } from "react-router-dom";
+
 
 const Home = () => {
   return (
@@ -9,7 +11,7 @@ const Home = () => {
         <p>
           Passionate about building smart, scalable solutions that bridge the gap between research and real-world applications.
         </p>
-        <a href="/about" className="btn btn-primary btn-lg mt-3">Learn More About Me</a>
+        <Link to="/about" className="btn btn-primary btn-lg mt-3">Learn More About Me</Link>
       </div>
     </section>
   );

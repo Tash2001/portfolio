@@ -6,7 +6,7 @@ const projects = [
     description:
       "AI-powered system for detecting fabric defects and analyzing texture using EfficientNetB3 and handcrafted features. Features real-time FastAPI backend and PWA frontend.",
     tech: "React, FastAPI, TensorFlow, PostgreSQL",
-    image: "/projects/fabricguard.png",
+    image: "./projects/fabricguard.png",
     link: "https://github.com/Tash2001/FabricGuard--Fabric-Quality-Assessment.git"
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     description:
       "Built with Node.js and React, supports posting, liking, following, and pagination with Dockerized microservices.",
     tech: "Node.js, React, SQLite, Docker",
-    image: "/projects/travelTales.png",
+    image: "./projects/travelTales.png",
     link: "https://github.com/Tash2001/Advanced-Server-Side-CW-w1898910.git"
   }
 ];

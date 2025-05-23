@@ -8,7 +8,7 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-md-6 mb-4 mb-md-0">
             <img
-              src="tashini.jpg"
+              src="./tashini.jpg"
               alt="Profile"
               className="img-fluid rounded shadow"
             />
@@ -21,7 +21,7 @@ const About = () => {
               My goal is to create scalable, user-friendly applications that deliver value. I’m a quick learner who enjoys experimenting with new technologies and always strives to improve.
             </p>
             <a
-              href="/tashini weerakoon CV.pdf"
+              href={`${process.env.PUBLIC_URL}/tashini weerakoon CV.pdf`}
               className="btn btn-outline-primary mt-3"
               target="_blank"
               rel="noopener noreferrer"
