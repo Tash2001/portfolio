@@ -53,6 +53,14 @@ const Contact = () => {
                                 </button>
                             </div>
 
+                            <div className="mt-3">
+                                <button
+                                    className="btn btn-outline-dark"
+                                    onClick={() => navigator.clipboard.writeText("+94(76) 446 7569")}
+                                >
+                                    Tel: +94(76) 446 7569
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

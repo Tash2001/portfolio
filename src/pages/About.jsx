@@ -1,4 +1,5 @@
 import React from "react";
+import { FaDownload } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -16,29 +17,32 @@ const About = () => {
           </div>
           <div className="col-md-6">
             <p>
-              I'm Tashini Weerakoon, a final-year Software Engineering student passionate about full-stack development, machine learning, and solving real-world problems through technology. I’ve worked on diverse projects from AI-powered quality inspection systems and microservice-based blogging platforms.
+              I'm Tashini Maleesha Weerakoon, a dedicated and enthusiastic Software Engineering graduate with a strong passion for building impactful digital solutions. I’ve recently completed all academic and final project requirements for my BSc (Hons) in Software Engineering, and I’m now eagerly awaiting graduation. Over the past few years, I’ve developed diverse technical skills in full-stack web development, machine learning, microservice architecture, and cloud-based application deployment. From university research to industry-level systems, I’ve turned ideas into functional, scalable software that solves real-world problems.
             </p>
             <p>
               My goal is to create scalable, user-friendly applications that deliver value. I’m a quick learner who enjoys experimenting with new technologies and always strives to improve.
             </p>
-            <a
-              href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
-              className="btn btn-outline-primary mt-3"
-              download
-            // target="_blank"
-            // rel="noopener noreferrer"
-            >
-              Download Resume
-            </a>
-            <br />
-            <a
-              href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
-              className="btn btn-outline-primary mt-3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open Resume
-            </a>
+            <div className="d-flex gap-3 mt-3">
+              <a
+                href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
+                className="btn btn-outline-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
+
+              <a
+                href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
+                className="btn btn-outline-primary d-flex justify-content-center align-items-center"
+                style={{ width: "44px", height: "44px" }}
+                download
+              >
+                <FaDownload />
+              </a>
+            </div>
+
+
           </div>
         </div>
       </div>

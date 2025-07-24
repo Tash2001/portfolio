@@ -16,7 +16,7 @@ const experiences = [
       {
         title: "Card Management System – Paytect",
         details:
-          "Developed modules for card issuing, fraud detection, and personalization using React.js, Spring Boot microservices, and Oracle DB. Participated in agile sprints with Jira.",
+          "Developed core modules for card issuing, fraud detection, and personalization using React.js, Spring Boot microservices, and Oracle Database. Actively contributed to agile sprints using Jira for task and sprint management.",
       },
     ],
   },
@@ -30,12 +30,7 @@ const experiences = [
       {
         title: "FabricGuard – AI-based Fabric Quality Assessment System",
         details:
-          "Built using EfficientNetB3, SE attention, and handcrafted texture features. Integrated a FastAPI backend with PostgreSQL and deployed as a responsive PWA.",
-      },
-      {
-        title: "Real-time Inference & Reporting",
-        details:
-          "Enabled live quality checks and auto-generated reports for industrial fabric inspection using machine learning and backend APIs.",
+          "Built using EfficientNetB3, SE attention, and handcrafted texture features. Integrated a FastAPI backend with PostgreSQL and deployed as a responsive PWA.Enabled live quality checks and auto-generated reports for industrial fabric inspection using machine learning and backend APIs.",
       },
     ],
   },

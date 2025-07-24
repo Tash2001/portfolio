@@ -5,7 +5,7 @@ const skillCategories = {
   "Frontend": ["React.js", "HTML5", "CSS3", "Bootstrap"],
   "Backend": ["Node.js", "Express.js", "FastAPI", "Spring Boot"],
   "Databases": ["PostgreSQL", "SQLite", "MySQL", "Oracle", "MongoDB"],
-  "Tools & Platforms": ["Git", "GitHub", "Docker", "Render"],
+  "Tools & Platforms": ["Git", "GitHub", "Docker", "Render", "JIRA", "GitLab"],
   "Machine Learning": ["TensorFlow", "Keras", "OpenCV", "Scikit-learn"]
 };
 
