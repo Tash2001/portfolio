@@ -2,38 +2,72 @@ import React from "react";
 
 const experiences = [
   {
-    role: "Full-stack Developer & ML Engineer – FabricGuard",
-    time: "Nov 2024 – Apr 2025",
-    description:
-      "Developed an AI-powered fabric quality inspection system using EfficientNetB3, SE attention, and texture features. Integrated with FastAPI backend and PostgreSQL, deployed as a PWA.",
-    type: "project"
+    role: "Software Engineering Intern",
+    company: "Epic Lanka",
+    time: "July 2023 – July 2024",
+    summary:
+      "Worked on full-stack development of enterprise-grade systems for government and finance sectors in agile teams.",
+    projects: [
+      {
+        title: "Document Management System – Parliament of Sri Lanka",
+        details:
+          "Built a secure system for document storage and retrieval using React TypeScript for the frontend and Spring Boot for backend services. Integrated SQL databases via Workbench.",
+      },
+      {
+        title: "Card Management System – Paytect",
+        details:
+          "Developed modules for card issuing, fraud detection, and personalization using React.js, Spring Boot microservices, and Oracle DB. Participated in agile sprints with Jira.",
+      },
+    ],
   },
   {
-    role: "Backend Developer – TravelTales CW2",
-    time: "Mar 2025 – Apr 2025",
-    description:
-      "Created a microservices-based blogging platform using Node.js, Express, and Docker. Implemented likes/dislikes, follows, and API documentation.",
-    type: "coursework"
-  }
+    role: "Full-stack Developer & ML Engineer",
+    company: "University Research Project – FabricGuard",
+    time: "Nov 2024 – Apr 2025",
+    summary:
+      "Led a research project on automated fabric defect detection and texture analysis using AI and handcrafted features.",
+    projects: [
+      {
+        title: "FabricGuard – AI-based Fabric Quality Assessment System",
+        details:
+          "Built using EfficientNetB3, SE attention, and handcrafted texture features. Integrated a FastAPI backend with PostgreSQL and deployed as a responsive PWA.",
+      },
+      {
+        title: "Real-time Inference & Reporting",
+        details:
+          "Enabled live quality checks and auto-generated reports for industrial fabric inspection using machine learning and backend APIs.",
+      },
+    ],
+  },
 ];
 
 const Experience = () => {
   return (
-    <section className="py-5" data-aos="fade-up">
+    <section className="py-5 bg-light" data-aos="fade-up">
       <div className="container">
-        <h2 className="text-center mb-4">Experience & Projects</h2>
+        <h2 className="text-center mb-5">Experience & Research</h2>
 
-        <div className="timeline mb-5">
+        <div className="timeline">
           {experiences.map((exp, index) => (
-            <div key={index} className="mb-4 position-relative ps-4 border-start border-2 border-primary">
-              <h5 className="fw-bold">{exp.role}</h5>
-              <span className="text-muted">{exp.time}</span>
-              <p className="mt-2">{exp.description}</p>
+            <div
+              key={index}
+              className="position-relative ps-4 mb-5 border-start border-4 border-primary"
+            >
+              <span className="badge bg-primary mb-2">{exp.time}</span>
+              <h5 className="fw-bold mb-1">{exp.role}</h5>
+              <p className="mb-1 text-muted">{exp.company}</p>
+              <p>{exp.summary}</p>
+
+              <ul className="mt-3">
+                {exp.projects.map((project, i) => (
+                  <li key={i} className="mb-2">
+                    <strong>{project.title}:</strong> {project.details}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
-
-       
       </div>
     </section>
   );

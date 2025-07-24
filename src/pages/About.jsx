@@ -21,12 +21,22 @@ const About = () => {
               My goal is to create scalable, user-friendly applications that deliver value. I’m a quick learner who enjoys experimenting with new technologies and always strives to improve.
             </p>
             <a
-              href={`${process.env.PUBLIC_URL}/tashini weerakoon CV.pdf`}
+              href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
+              className="btn btn-outline-primary mt-3"
+              download
+            // target="_blank"
+            // rel="noopener noreferrer"
+            >
+              Download Resume
+            </a>
+            <br />
+            <a
+              href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
               className="btn btn-outline-primary mt-3"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Download Resume
+              Open Resume
             </a>
           </div>
         </div>
