@@ -11,6 +11,7 @@ const About = () => {
               src="./tashini.jpg"
               alt="Profile"
               className="img-fluid rounded shadow"
+              style={{ maxWidth: "100%", height: "auto", maxHeight: "600px", objectFit: "cover" }}
             />
           </div>
           <div className="col-md-6">
