@@ -2,70 +2,71 @@ import React from "react";
 
 const experiences = [
   {
-    role: "Software Engineering Intern",
-    company: "Epic Lanka",
-    time: "July 2023 – July 2024",
-    summary:
-      "Worked on full-stack development of enterprise-grade systems for government and finance sectors in agile teams.",
+    role: "Associate Software Engineer",
+    company: "Arvutt Pvt. Ltd",
+    time: "July 2025 – Present",
+    points: [
+      "Build full-stack web and desktop applications with React.js, Spring Boot, Electron.js, and FastAPI.",
+      "Design SQL databases, and test and debug features to keep applications reliable.",
+      "Transform raw transactional data into star-schema models with MySQL and Power Query, then build Power BI dashboards.",
+    ],
     projects: [
-      {
-        title: "Document Management System – Parliament of Sri Lanka",
-        details:
-          "Built a secure system for document storage and retrieval using React TypeScript for the frontend and Spring Boot for backend services. Integrated SQL databases via Workbench.",
-      },
-      {
-        title: "Card Management System – Paytect",
-        details:
-          "Developed core modules for card issuing, fraud detection, and personalization using React.js, Spring Boot microservices, and Oracle Database. Actively contributed to agile sprints using Jira for task and sprint management.",
-      },
+      ["Inventory and Order Management System", "React.js,NodeJS, and PostgreSQL platform that automates stock management, supplier tracking, and invoice generation."],
+      ["Labor Tracker", "Designed a value added services labor tracker using React.js and FastAPI log high-value secondary processing tasks."],
+      ["Warehouse Pick & Efficiency Tracker", "Developed a performance monitoring system using React.js , Spring Boot and MySQL to track pick rates and to monitor item movement efficiency. "],
+      ["Client Dashboards", "Logistics, Customer Acknowledgment, and SLA dashboards in Power BI and SQL."]
+    ],
+  },
+  {
+    role: "Software Engineering Intern",
+    company: "Epic Lanka Pvt. Ltd",
+    time: "July 2023 – July 2024",
+    points: [
+      "Worked on enterprise systems for the government and financial sectors in agile teams.",
+    ],
+    projects: [
+      ["Document Management System, Parliament of Sri Lanka", "Secure document storage and retrieval with React TypeScript and Spring Boot."],
+      ["Card Management System, Paytect", "Card application, personalization, and fraud detection modules using React.js, Spring Boot microservices, and Oracle."],
     ],
   },
   {
     role: "Full-stack Developer & ML Engineer",
-    company: "University Research Project – FabricGuard",
-    time: "Nov 2024 – Apr 2025",
-    summary:
-      "Led a research project on automated fabric defect detection and texture analysis using AI and handcrafted features.",
-    projects: [
-      {
-        title: "FabricGuard – AI-based Fabric Quality Assessment System",
-        details:
-          "Built using EfficientNetB3, SE attention, and handcrafted texture features. Integrated a FastAPI backend with PostgreSQL and deployed as a responsive PWA.Enabled live quality checks and auto-generated reports for industrial fabric inspection using machine learning and backend APIs.",
-      },
+    company: "Final-year research project, FabricGuard",
+    time: "2024 – 2025",
+    points: [
+      "Built an AI fabric defect detection system with EfficientNetB3, SE blocks, and handcrafted texture features, served through FastAPI and a PWA.",
     ],
+    projects: [],
   },
 ];
 
-const Experience = () => {
-  return (
-    <section className="py-5 bg-light" data-aos="fade-up">
-      <div className="container">
-        <h2 className="text-center mb-5">Experience & Research</h2>
-
-        <div className="timeline">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="position-relative ps-4 mb-5 border-start border-4 border-primary"
-            >
-              <span className="badge bg-primary mb-2">{exp.time}</span>
-              <h5 className="fw-bold mb-1">{exp.role}</h5>
-              <p className="mb-1 text-muted">{exp.company}</p>
-              <p>{exp.summary}</p>
-
-              <ul className="mt-3">
-                {exp.projects.map((project, i) => (
-                  <li key={i} className="mb-2">
-                    <strong>{project.title}:</strong> {project.details}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+const Experience = () => (
+  <section className="section">
+    <div className="container" style={{ maxWidth: 860 }}>
+      <h2 className="section-title">Experience</h2>
+      <p className="section-sub">Where I've worked and what I've shipped.</p>
+      <div className="timeline">
+        {experiences.map((e) => (
+          <div className="t-item" key={e.role + e.company}>
+            <div className="t-date">{e.time}</div>
+            <h3 className="h5 mb-0">{e.role}</h3>
+            <p className="muted mb-2">{e.company}</p>
+            <ul>{e.points.map((p) => <li key={p}>{p}</li>)}</ul>
+            {e.projects.length > 0 && (
+              <div className="panel mt-3">
+                <strong>Key projects</strong>
+                <ul className="mt-2">
+                  {e.projects.map(([t, d]) => (
+                    <li key={t} className="mb-1"><strong>{t}:</strong> {d}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Experience;

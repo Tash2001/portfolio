@@ -1,53 +1,50 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa";
 
-const About = () => {
-  return (
-    <section className="py-5" data-aos="fade-up">
-      <div className="container">
-        <h2 className="text-center mb-4">About Me</h2>
-        <div className="row align-items-center">
-          <div className="col-md-6 mb-4 mb-md-0">
-            <img
-              src="./tashini.jpg"
-              alt="Profile"
-              className="img-fluid rounded shadow"
-              style={{ maxWidth: "100%", height: "auto", maxHeight: "600px", objectFit: "cover" }}
-            />
-          </div>
-          <div className="col-md-6">
-            <p>
-              I'm Tashini Maleesha Weerakoon, a dedicated and enthusiastic Software Engineering graduate with a strong passion for building impactful digital solutions. I’ve recently completed all academic and final project requirements for my BSc (Hons) in Software Engineering, and I’m now eagerly awaiting graduation. Over the past few years, I’ve developed diverse technical skills in full-stack web development, machine learning, microservice architecture, and cloud-based application deployment. From university research to industry-level systems, I’ve turned ideas into functional, scalable software that solves real-world problems.
-            </p>
-            <p>
-              My goal is to create scalable, user-friendly applications that deliver value. I’m a quick learner who enjoys experimenting with new technologies and always strives to improve.
-            </p>
-            <div className="d-flex gap-3 mt-3">
-              <a
-                href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
-                className="btn btn-outline-primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
-
-              <a
-                href={`${process.env.PUBLIC_URL}/Tashini Hendahewa.pdf`}
-                className="btn btn-outline-primary d-flex justify-content-center align-items-center"
-                style={{ width: "44px", height: "44px" }}
-                download
-              >
-                <FaDownload />
-              </a>
-            </div>
-
-
+const About = () => (
+  <section className="section">
+    <div className="container">
+      <div className="row g-5 align-items-center">
+        <div className="col-md-5">
+          <img
+            src={`${process.env.PUBLIC_URL}/tashini.jpg`}
+            alt="Tashini Hendahewa"
+            className="img-fluid shadow"
+            style={{ borderRadius: 24, width: "100%", maxHeight: 520, objectFit: "cover" }}
+          />
+        </div>
+        <div className="col-md-7">
+          <h2 className="section-title">About me</h2>
+          <p>
+            I'm a software engineer with a BEng (Hons) in Software Engineering from the University of
+            Westminster. Since July 2025 I've worked at Arvutt as an Associate Software Engineer, building
+            full-stack web apps, Electron desktop tools, and Power BI dashboards for clients across industries.
+          </p>
+          <p>
+            Before that, I spent a year at Epic Lanka working on systems for the Parliament of Sri Lanka and
+            the Paytect card platform. My final-year project, FabricGuard, applied machine learning to
+            fabric defect detection.
+          </p>
+          <p className="muted">
+            I like clear code, reliable databases, and software that solves a real problem for the person using it.
+          </p>
+          <div className="d-flex gap-3 mt-4">
+            <a href={`${process.env.PUBLIC_URL}/Tashini_Hendahewa_CV_261028.pdf`} className="btn btn-accent" target="_blank" rel="noopener noreferrer">
+              View resume
+            </a>
+            <a
+              href={`${process.env.PUBLIC_URL}/Tashini_Hendahewa_CV_261028.pdf`}
+              className="btn btn-ghost d-flex align-items-center gap-2"
+              download
+              aria-label="Download resume"
+            >
+              <FaDownload /> Download
+            </a>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;

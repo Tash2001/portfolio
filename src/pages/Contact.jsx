@@ -1,72 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
+
+const EMAIL = "tashini.maleesha@gmail.com";
 
 const Contact = () => {
-    return (
-        <section className="py-5" data-aos="fade-up">
-            <div className="container">
-                <h2 className="text-center mb-4">Contact Me</h2>
+  const [copied, setCopied] = useState(false);
+  const copy = () => {
+    navigator.clipboard.writeText(EMAIL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-                <div className="row justify-content-center">
-                    <div className="col-md-8">
-                        <form action="https://formspree.io/f/mzzrqqnj" method="POST">
-                            <div className="mb-3">
-                                <label htmlFor="name" className="form-label">Name</label>
-                                <input type="text" className="form-control" name="name" id="name" required />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="email" className="form-label">Email</label>
-                                <input type="email" className="form-control" name="email" id="email" required />
-                            </div>
-                            <div className="mb-3">
-                                <label htmlFor="message" className="form-label">Message</label>
-                                <textarea className="form-control" name="message" id="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" className="btn btn-primary w-100">Send Message</button>
-                        </form>
-
-                        <hr className="my-5" />
-
-                        <div className="text-center">
-                            <h5 className="mb-3">Connect with me</h5>
-                            <a
-                                href="https://github.com/Tash2001"
-                                className="btn btn-outline-dark mx-2"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
-                            <a
-                                href="https://www.linkedin.com/in/tashini-maleesha-133176234/"
-                                className="btn btn-outline-dark mx-2"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                LinkedIn
-                            </a>
-                            <div className="mt-3">
-                                <button
-                                    className="btn btn-outline-dark"
-                                    onClick={() => navigator.clipboard.writeText("tashini.maleesha@gmail.com")}
-                                >
-                                    Email: tashini.maleesha@gmail.com
-                                </button>
-                            </div>
-
-                            <div className="mt-3">
-                                <button
-                                    className="btn btn-outline-dark"
-                                    onClick={() => navigator.clipboard.writeText("+94(76) 446 7569")}
-                                >
-                                    Tel: +94(76) 446 7569
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <section className="section">
+      <div className="container" style={{ maxWidth: 900 }}>
+        <h2 className="section-title">Contact</h2>
+        <p className="section-sub">Have a role, project, or question? Send a message and I'll reply by email.</p>
+        <div className="row g-4">
+          <div className="col-md-7">
+            <form className="panel" action="https://formspree.io/f/mzzrqqnj" method="POST">
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">Name</label>
+                <input type="text" className="form-control" name="name" id="name" required />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" className="form-control" name="email" id="email" required />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">Message</label>
+                <textarea className="form-control" name="message" id="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" className="btn btn-accent w-100">Send message</button>
+            </form>
+          </div>
+          <div className="col-md-5">
+            <div className="panel">
+              <h3 className="h5">Elsewhere</h3>
+              <p className="mb-1"><a className="link-arrow" href="https://github.com/Tash2001" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+              <p className="mb-1"><a className="link-arrow" href="https://www.linkedin.com/in/tashini-maleesha-133176234/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+              <p className="mb-3"><a className="link-arrow" href="tel:+94764467569">+94 76 446 7569</a></p>
+              <button className="btn btn-ghost w-100" onClick={copy}>
+                {copied ? "Email copied" : "Copy email address"}
+              </button>
+              <p className="muted small mt-3 mb-0">Based in Rajagiriya, Sri Lanka</p>
             </div>
-        </section >
-    );
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Contact;

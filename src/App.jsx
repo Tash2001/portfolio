@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -7,27 +7,36 @@ import Skills from "./pages/Skills";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "aos/dist/aos.css";
-import AOS from "aos";
+import "./index.css";
+import "./App.css";
+import "./custom.css";
+
+// Scroll to top whenever the page changes
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  React.useEffect(() => window.scrollTo(0, 0), [pathname]);
+  return null;
+};
 
 function App() {
-  React.useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
     <Router>
-      <Navbar />
-      <div className="container mt-4">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <ScrollToTop />
+      <div className="app-shell">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
     </Router>
   );
