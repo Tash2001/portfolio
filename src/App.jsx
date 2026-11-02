@@ -16,7 +16,9 @@ import "./custom.css";
 // Scroll to top whenever the page changes
 const ScrollToTop = () => {
   const { pathname } = useLocation();
-  React.useEffect(() => window.scrollTo(0, 0), [pathname]);
+React.useEffect(() => {
+  window.scrollTo(0, 0);
+}, [pathname]);
   return null;
 };
 
